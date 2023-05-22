@@ -1,0 +1,97 @@
+{% load static %}
+
+<!Doctype html>
+<html len='en'>
+    <head>
+        <title>Menu</title>
+    </head>
+    <style>
+        body {
+            min-height: 100%;
+       }
+        body{
+            overflow-x: hidden;
+        }
+        .section{
+            margin-top:50px;
+            margin-bottom:50px;
+        }
+        .menu div{
+            margin-bottom:10px;
+            padding-bottom:5px;
+        }
+        .menu h1{
+            font-size:45px;
+            font-weight:bold;
+        }
+        .menu div a{
+            text-decoration:none;
+            color:#eb83e4;
+            font-size:15px;
+            font-weight:bold;
+        }
+        body{
+           padding:0;
+            margin:0;
+            padding-top:5px;
+
+            {% comment %} text-align:center; {% endcomment %}
+        }
+        .container {
+            {% comment %} background-color:skyblue; {% endcomment %}
+            width:100%;
+            height:140px;
+            text-align:center;
+        }
+       .little{
+        color:#617a68;
+        letter-spacing:2px;
+        font-size:30px;
+        font-weight:800;
+       } 
+
+       .menu{
+        {% comment %} background-color: skyblue; {% endcomment %}
+        width:15%;
+        height:auto;
+        margin-left:23px;
+       }
+    </style>
+    <body>
+        <main>
+{% block content %}
+<div class="container"><img src="../static/litlelemon1.png" ></img></div>
+
+{%  include "partials/_header.html" %}
+<div class="section">
+<div class="menu">
+    <h1>Menu</h1>
+<div style="line-height:1px";> 
+    <a href="menu_item/1/">Bruschetta</a>
+    <p>11.00$</p>
+</div>  
+   
+<div style="line-height:1px";> 
+  <a href="menu_item/2/">Greek salad</a>
+    <p>12.00$</p>
+</div>   
+
+<div style="line-height:1px";> 
+    <a href="menu_item/3/">Grilled Fish </a>
+    <p>9.00$</p>
+</div>   
+
+<div style="line-height:1px";> 
+    <a href="menu_item/4/"> Lemon dissert</a>
+    <p>7.00$</p>
+</div>
+
+</div>
+</div>
+{%  include "partials/_footer.html" %}
+
+{% endblock content %}
+
+</main>
+    </body>
+</html>
